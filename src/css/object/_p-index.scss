@@ -1,0 +1,86 @@
+/*
+@include sp($point-sp)
+@include pc($point-pc) {}
+*/
+
+@charset "utf-8";
+
+.indexPage {
+  .index {
+    &__inner {
+      @include sp($point-sp) {
+        padding: 50px 20px 0;
+      }
+      @include pc($point-pc) {
+        padding: 0 80px;
+      }
+    }
+    &__list {
+      text-align: center;
+      @include sp($point-sp) {
+        margin: 0 0 60px;
+      }
+      @include pc($point-pc) {
+        margin: 0 0 60px;
+      }
+      &Item {
+        border: 1px solid #aaa;
+        display: inline-block;
+        margin: 0 0 10px;
+        @include sp($point-sp) {
+          width: 80vw;
+        }
+        @include pc($point-pc) {
+          margin: 0 20px;
+        }
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          @include sp($point-sp) {
+            justify-content: space-between;
+          }
+          @include pc($point-pc) {
+            justify-content: center;
+          }
+        }
+        .listItem {
+          &__title {
+            font-weight: normal;
+            color: #fff;
+            padding: 10px 20px;
+            @include sp($point-sp) {
+              font-size: 12px;
+            }
+            @include pc($point-pc) {
+              font-size: 15px;
+            }
+          }
+          &__image {
+            padding: 0 20px;
+            img {
+              @include sp($point-sp) {
+                width: 40vw;
+                height: 250px;
+              }
+            }
+          }
+        }
+        &.cssAnimation {
+          .listItem {
+            &__title {
+              background: #0D57A7;
+            }
+          }
+        }
+        &.googleAPI {
+          .listItem {
+            &__title {
+              background: #EA4335;
+            }
+          }
+        }
+      }
+    }
+  }
+}

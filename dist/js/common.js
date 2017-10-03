@@ -1,0 +1,1 @@
+!function(n){"use strict";function t(){n(".l-pagetop a").on("click",function(){n("html, body").animate({scrollTop:0},400)})}function c(){n('a[href="#"]').on("click",function(){return!1})}function o(){n(".l-gNav__btn a").on("click",function(){n(this).parent(".l-gNav__btn").toggleClass("navOn")})}t(),c(),o()}(jQuery);

@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+/*
+@include sp($point-sp)
+@include tb($point-tb) {}
+@include pc01($point-pc01) {}
+@include pc02($point-pc02) {}
+*/
+
+.l-gNav{
+  &__list {
+    text-align: center;
+    border: 1px solid #999;
+    border-style: solid none;
+    @include sp($point-sp) {
+      margin: 0 0 60px;
+    }
+    @include pc($point-pc) {
+      margin: 0 0 60px;
+    }
+    &Item {
+      @include sp($point-sp) {
+      }
+      @include pc($point-pc) {
+      }
+      a {
+        display: block;
+        @include sp($point-sp) {
+          height: 30px;
+          line-height: 30px;
+        }
+        @include pc($point-pc) {
+          height: 30px;
+          line-height: 30px;
+        }
+        &:hover {
+          background: #ddd;
+        }
+      }
+    }
+  }
+}
