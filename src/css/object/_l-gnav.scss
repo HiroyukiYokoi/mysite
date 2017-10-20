@@ -7,36 +7,121 @@
 @include pc02($point-pc02) {}
 */
 
-.l-gNav{
-  &__list {
-    text-align: center;
-    border: 1px solid #999;
-    border-style: solid none;
-    @include sp($point-sp) {
-      margin: 0 0 60px;
-    }
-    @include pc($point-pc) {
-      margin: 0 0 60px;
-    }
-    &Item {
-      @include sp($point-sp) {
-      }
-      @include pc($point-pc) {
-      }
-      a {
+.l-gNav {
+  &__btn {
+    height: 60px;
+    width: 60px;
+    top: 20px;
+    right: 20px;
+    position: fixed;
+    z-index: 10;
+    background: rgba(255, 255, 255, .5);
+    border-radius: 50%;
+    a {
+      width: 20px;
+      height: 16px;
+      display: block;
+      position: absolute;
+      right: 20px;
+      top: 22px;
+      &::before,
+      &::after {
+        content: "";
+        width: 20px;
+        height: 0px;
         display: block;
-        @include sp($point-sp) {
-          height: 30px;
-          line-height: 30px;
+        position: absolute;
+        border: 1px solid #000;
+        border-radius: 1px;
+        top: 10px;
+        transition: .4s transform, transform 0.4s cubic-bezier(0.22,0.61,0.36,1);
+      }
+      &::before {
+        top: 14px;
+        transform: translateZ(0) rotate(0deg);
+      }
+      &::after {
+        top: 0px;
+        transform: translateZ(0) rotate(0deg);
+      }
+      &:hover {
+        opacity: 1;
+      }
+    }
+    span {
+      &::before {
+        content: "";
+        width: 20px;
+        height: 0px;
+        display: block;
+        position: absolute;
+        // z-index: 200;
+        border: 1px solid #000;
+        border-radius: 1px;
+        top: 7px;
+        visibility: visible;
+        opacity: 1;
+        transition: .4s opacity;
+      }
+    }
+    &.navOn {
+      visibility: visible;
+      transform: translateY(0);
+      a {
+        width: 24px;
+        height: 24px;
+        top: 18px;
+        right: 18px;
+        &::before,
+        &::after {
+          width: 25px;
+          height: 0px;
+          border-radius: 1px;
+          top: 10px;
+          border-color: #000;
         }
-        @include pc($point-pc) {
-          height: 30px;
-          line-height: 30px;
+        &::before {
+          transform: translateZ(0) rotate(135deg);
         }
-        &:hover {
-          background: #ddd;
+        &::after {
+          transform: translateZ(0) rotate(-135deg);
         }
       }
+      span {
+        &::before {
+          visibility: hidden;
+          opacity: 0;
+        }
+      }
+    }
+  }
+  &__wrap {
+    background: rgba(255, 255, 255, .5);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+    &.is-open {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &__list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .listItem {
+      text-align: center;
+      margin: 10px 0;
+      font-size: 20px;
     }
   }
 }

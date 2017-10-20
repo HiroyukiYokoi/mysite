@@ -25,40 +25,102 @@
 <meta name="twitter:description" content="">
 <meta name="twitter:image" content="http:///img/common/ogp.png">
 
+<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" crossorigin="anonymous">
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <link rel="stylesheet" href="/css/vendor/ress.css">
 <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
 
 </head>
 
 <body class="indexPage">
-  <div class="l-container">
-
-    <!-- l-header START -->
-    <!--include START-->
+  <!-- l-header START -->
+  <!--include START-->
 <header class="l-header">
-  <div class="l-header__logo">
-    <a href="/">
-      <h1 class="site_title">snippets</h1>
-    </a>
+  <div class="l-gNav">
+    <div class="l-gNav__btn"><a href="#"><span></span></a></div>
+    <nav class="l-gNav__wrap">
+      <ul class="l-gNav__list">
+        <li class="listItem">
+          <a href="/">
+            <span class="item__text">TOP</span>
+          </a>
+        </li>
+        <li class="listItem">
+          <a href="/htmlcss">
+            <span class="item__text">HTML/CSS</span>
+          </a>
+        </li>
+        <li class="listItem">
+          <a href="/javascript">
+            <span class="item__text">JavaScript</span>
+          </a>
+        </li>
+        <li class="listItem">
+          <a href="/usefultool">
+            <span class="item__text">ツール系</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
   </div>
 </header>
 <!--include END-->
 
-    <!-- l-header END -->
+  <!-- l-header END -->
 
-    <!-- l-gnav START -->
-    <!--include START-->
-<nav class="l-gNav">
-</nav>
-<!--include END-->
+  <!-- l-gnav START -->
+  
+  <!-- l-gnav END -->
 
-    <!-- l-gnav END -->
+  <div class="l-container">
+    <div class="l-loading"></div>
+
+    <div class="mainVisual">
+      <div class="mainVisual__text">
+        <h1 class="siteTitle">TIPS</h1>
+      </div>
+      <ul class="mainVisual__bgList">
+        <li class="listItem">
+          <img src="/img/index/mainvisual_bg01.jpg" alt="ねこ">
+        </li>
+        <li class="listItem">
+          <img src="/img/index/mainvisual_bg02.jpg" alt="くま">
+        </li>
+        <li class="listItem">
+          <img src="/img/index/mainvisual_bg03.jpg" alt="とら">
+        </li>
+      </ul>
+    </div>
 
     <div class="l-contents">
       <main class="l-main">
-        
+        <ul class="contents__tags">
+          <li class="tagItem"><a href="">HTML/CSS</a></li>
+          <li class="tagItem"><a href="">JavaScript</a></li>
+          <li class="tagItem"><a href="">ツール系</a></li>
+        </ul>
+
+        <ul class="contents__list">
+          <li class="listItem">
+            <div class="photoWrap">
+              <img src="/img/index/20171020.jpg" alt="2017-10-20">
+            </div>
+            <div class="textWrap">
+              <div class="content__title">インライン要素とブロック要素</div>
+              <div class="content__detail">超基本だけど、抑えておきたいよね</div>
+              <ul class="c-tag">
+                <li class="tagItem"><a href="">HTML/CSS</a></li>
+                <li class="tagItem"><a href="">HTML/CSS</a></li>
+                <li class="tagItem"><a href="">HTML/CSS</a></li>
+              </ul>
+              <div class="c-viewMore">
+                <a href="">view more</a>
+              </div>
+            </div>
+          </li>
+        </ul>
       </main>
     </div>
     <!-- l-footer START -->
@@ -67,9 +129,9 @@
   <a href="#"><span>TOPへ</span></a>
 </div>
 <footer class="l-footer">
-  <div class="l-footer__img">
+  <!-- <div class="l-footer__img">
     <img src="/img/common/htgmip.png" width="20" height="20" alt="">
-  </div>
+  </div> -->
 </footer>
 <!--include END-->
 
@@ -78,9 +140,8 @@
   <!-- *** JavaScript *** -->
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
-<script src="/js/common.js"></script>
-<script src="/js/map.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfA9UyN24AWaATnDcxoRosNo7SxbqnStI&callback=initMap"></script>
+<script src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+<script src="/js/script.js"></script>
 
 </body>
 

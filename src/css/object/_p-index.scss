@@ -5,81 +5,63 @@
 
 @charset "utf-8";
 
-.indexPage {
-  .index {
-    &__inner {
-      @include sp($point-sp) {
-        padding: 50px 20px 0;
-      }
-      @include pc($point-pc) {
-        padding: 0 80px;
-      }
+.mainVisual {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+    z-index: 2;
+  }
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    &::before {
+      content: '';
+      position: absolute;
+      -webkit-filter: blur(50px);
+      -moz-filter: blur(50px);
+      -ms-filter: blur(50px);
+      filter: blur(50px);
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, .1);
     }
-    &__list {
-      text-align: center;
-      @include sp($point-sp) {
-        margin: 0 0 60px;
-      }
-      @include pc($point-pc) {
-        margin: 0 0 60px;
-      }
-      &Item {
-        border: 1px solid #aaa;
-        display: inline-block;
-        margin: 0 0 10px;
-        @include sp($point-sp) {
-          width: 80vw;
-        }
-        @include pc($point-pc) {
-          margin: 0 20px;
-        }
-        a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          @include sp($point-sp) {
-            justify-content: space-between;
-          }
-          @include pc($point-pc) {
-            justify-content: center;
-          }
-        }
-        .listItem {
-          &__title {
-            font-weight: normal;
-            color: #fff;
-            padding: 10px 20px;
-            @include sp($point-sp) {
-              font-size: 12px;
-            }
-            @include pc($point-pc) {
-              font-size: 15px;
-            }
-          }
-          &__image {
-            padding: 0 20px;
-            img {
-              @include sp($point-sp) {
-                width: 40vw;
-                height: 250px;
-              }
-            }
-          }
-        }
-        &.cssAnimation {
-          .listItem {
-            &__title {
-              background: #0D57A7;
-            }
-          }
-        }
-        &.googleAPI {
-          .listItem {
-            &__title {
-              background: #EA4335;
-            }
-          }
-        }
+    .siteTitle {
+      font-size: 8vw;
+      font-family: 'Poiret One', cursive;
+      color: #fff;
+      border: 1px solid #fff;
+      width: 30vw;
+      height: 30vw;
+      max-width: 400px;
+      max-height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &__bgList {
+    width: 100%;
+    height: 100%;
+    .listItem {
+      height: 100vh;
+      img {
+        position: absolute;
+        z-index: 100;
+        min-width: 100%;
+        min-height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
     }
   }

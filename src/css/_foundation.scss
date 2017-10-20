@@ -25,22 +25,6 @@ html>body {
   }
 }
 
-.c-childPage__title {
-  margin: 0 0 50px;
-}
-
-.codeQuote__short {
-  background: #fffe9f;
-  padding: 0 10px;
-  border-radius: 5px;
-  color: #ff5e5e;
-  @include sp($point-sp) {
-  }
-  @include pc($point-pc) {
-    font-size: 14px;
-  }
-}
-
 ul {
   list-style: none;
 }
@@ -138,14 +122,14 @@ body {
 
 .l-container {
   width: 100%;
-  position: relative;
   height: 100%;
-  min-height: 100%;
-  @include sp($point-sp) {
-    padding: 30px 0 0;
-  }
-  @include pc($point-pc) {
-    padding: 60px 0 0;
+  transition: all .3s;
+  position: relative;
+  &.is-under {
+    position: fixed;
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -ms-filter: blur(10px);
   }
 }
 

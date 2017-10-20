@@ -9,19 +9,61 @@
 </head>
 
 <body class="indexPage">
+  <!-- l-header START -->
+  @@include('l-header.html')
+  <!-- l-header END -->
+
+  <!-- l-gnav START -->
+  <!-- @@include('l-gnav.html') -->
+  <!-- l-gnav END -->
+
   <div class="l-container">
+    <div class="l-loading"></div>
 
-    <!-- l-header START -->
-    @@include('l-header.html')
-    <!-- l-header END -->
-
-    <!-- l-gnav START -->
-    @@include('l-gnav.html')
-    <!-- l-gnav END -->
+    <div class="mainVisual">
+      <div class="mainVisual__text">
+        <h1 class="siteTitle">TIPS</h1>
+      </div>
+      <ul class="mainVisual__bgList">
+        <li class="listItem">
+          <img src="/img/index/mainvisual_bg01.jpg" alt="ねこ">
+        </li>
+        <li class="listItem">
+          <img src="/img/index/mainvisual_bg02.jpg" alt="くま">
+        </li>
+        <li class="listItem">
+          <img src="/img/index/mainvisual_bg03.jpg" alt="とら">
+        </li>
+      </ul>
+    </div>
 
     <div class="l-contents">
       <main class="l-main">
-        
+        <ul class="contents__tags">
+          <li class="tagItem"><a href="">HTML/CSS</a></li>
+          <li class="tagItem"><a href="">JavaScript</a></li>
+          <li class="tagItem"><a href="">ツール系</a></li>
+        </ul>
+
+        <ul class="contents__list">
+          <li class="listItem">
+            <div class="photoWrap">
+              <img src="/img/index/20171020.jpg" alt="2017-10-20">
+            </div>
+            <div class="textWrap">
+              <div class="content__title">インライン要素とブロック要素</div>
+              <div class="content__detail">超基本だけど、抑えておきたいよね</div>
+              <ul class="c-tag">
+                <li class="tagItem"><a href="">HTML/CSS</a></li>
+                <li class="tagItem"><a href="">HTML/CSS</a></li>
+                <li class="tagItem"><a href="">HTML/CSS</a></li>
+              </ul>
+              <div class="c-viewMore">
+                <a href="">view more</a>
+              </div>
+            </div>
+          </li>
+        </ul>
       </main>
     </div>
     <!-- l-footer START -->
